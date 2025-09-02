@@ -1,10 +1,27 @@
 #!/usr/bin/env python3
 import os
+import sys
+import re
 from dotenv import load_dotenv
 from src.bot import run_discord_bot
 from src.log import logger
 
 load_dotenv()
+
+def validate_discord_token(token: str) -> bool:
+    """Validate Discord bot token format"""
+    if not token:
+        return False
+    
+    # Discord bot tokens are typically in the format "Bot XXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    # But for simplicity, we'll just check if it's a reasonable length and contains only valid characters
+    if len(token) < 50 or len(token) > 100:
+        return False
+    
+    # Basic regex check for token format (this is a simplified check)
+    # Real tokens have specific patterns but we'll keep it simple
+    return bool(re.match(r'^[A-Za-z0-9_.-]+
+, token))
 
 def validate_environment():
     """Validate required environment variables"""
@@ -19,6 +36,12 @@ def validate_environment():
         logger.error(f"Missing required environment variables: {', '.join(missing_vars)}")
         logger.error("Please check your .env file")
         return False
+    
+    # Validate Discord token format
+    discord_token = os.getenv("DISCORD_BOT_TOKEN")
+    if not validate_discord_token(discord_token):
+        logger.warning("Discord bot token may be invalid. Please check the format.")
+        # We'll continue anyway but warn the user
     
     providers = []
     if os.getenv("OPENAI_KEY"):
@@ -41,15 +64,20 @@ def main():
     logger.info("Starting Discord AI Bot...")
     
     if not validate_environment():
-        return
+        logger.error("Environment validation failed. Exiting.")
+        sys.exit(1)
     
-    logger.info("Free provider configured - no authentication required")
+    logger.info("Environment validation passed")
     
     try:
         run_discord_bot()
+    except KeyboardInterrupt:
+        logger.info("Bot stopped by user")
+        sys.exit(0)
     except Exception as e:
-        logger.error(f"Bot crashed: {e}")
-        raise
+        logger.error(f"Bot crashed with unhandled exception: {e}")
+        logger.exception("Full traceback:")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

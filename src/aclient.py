@@ -3,6 +3,7 @@ import discord
 import asyncio
 import logging
 from typing import List, Dict, Optional
+from datetime import datetime, timedelta
 
 from src import personas
 from src.log import logger
@@ -16,6 +17,21 @@ load_dotenv()
 
 
 class DiscordClient(discord.Client):
+    """Main Discord client class for the AI bot.
+    
+    This class handles all Discord interactions, message processing,
+    provider management, and conversation history.
+    
+    Attributes:
+        provider_manager: Manages different AI providers (OpenAI, Claude, etc.)
+        conversation_history: Stores the conversation history for context
+        current_channel: Currently active Discord channel
+        current_persona: Current AI personality being used
+        isPrivate: Whether responses should be ephemeral
+        is_replying_all: Whether bot responds to all messages in channel
+        message_queue: Queue for processing messages with rate limiting
+        user_last_message_time: Tracks last message time per user for rate limiting
+    """
     def __init__(self) -> None:
         intents = discord.Intents.default()
         intents.message_content = True
@@ -50,6 +66,10 @@ class DiscordClient(discord.Client):
         self.is_replying_all = os.getenv("REPLYING_ALL", "False") == "True"
         self.replying_all_discord_channel_id = os.getenv("REPLYING_ALL_DISCORD_CHANNEL_ID")
         
+        # Rate limiting
+        self.user_last_message_time = {}  # Track last message time per user
+        self.rate_limit_seconds = int(os.getenv("RATE_LIMIT_SECONDS", "3"))  # Default 3 seconds between messages
+        
         # Load system prompt
         config_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         prompt_path = os.path.join(config_dir, "system_prompt.txt")
@@ -80,6 +100,23 @@ class DiscordClient(discord.Client):
     
     async def enqueue_message(self, message, user_message):
         """Add message to processing queue"""
+        # Rate limiting check
+        user_id = message.user.id if hasattr(message, 'user') else message.author.id
+        current_time = datetime.now()
+        
+        if user_id in self.user_last_message_time:
+            time_since_last = (current_time - self.user_last_message_time[user_id]).total_seconds()
+            if time_since_last < self.rate_limit_seconds:
+                remaining_time = self.rate_limit_seconds - time_since_last
+                await message.response.send_message(
+                    f"⏳ Please wait {remaining_time:.1f} seconds before sending another message.",
+                    ephemeral=True
+                )
+                return
+        
+        # Update last message time
+        self.user_last_message_time[user_id] = current_time
+        
         await message.response.defer(ephemeral=self.isPrivate) if hasattr(message, 'response') else None
         await self.message_queue.put((message, user_message))
     
@@ -140,6 +177,10 @@ class DiscordClient(discord.Client):
                 self.conversation_history = recent_messages
             
             logger.info(f"Trimmed conversation history to {len(self.conversation_history)} messages")
+        
+        # Check cache for recent similar requests (simple cache)
+        cache_key = f"{self.current_persona}:{user_message}"
+        # In a more sophisticated implementation, we could use a proper cache here
         
         # Get current provider
         provider = self.provider_manager.get_provider()

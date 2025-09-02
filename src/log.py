@@ -54,7 +54,7 @@ def setup_logger(module_name:str) -> logging.Logger:
 
     if os.getenv("LOGGING") == "True":  # Check if logging is enabled
         # Use /tmp for Docker read-only filesystem compatibility
-        log_dir = "/tmp" if os.path.exists("/tmp") else os.path.abspath(f"{__file__}/../../")
+        log_dir = "/tmp" if os.path.exists("/tmp") else os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         log_name = 'chatgpt_discord_bot.log'
         log_path = os.path.join(log_dir, log_name)
         
