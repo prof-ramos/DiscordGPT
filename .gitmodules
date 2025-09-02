@@ -1,12 +1,3 @@
-[submodule "docs/themes/docsy"]
-	path = docs/themes/docsy
-	url = https://github.com/google/docsy.git
-[submodule "docs/themes/github.com/FortAwesome/Font-Awesome"]
-	path = docs/themes/github.com/FortAwesome/Font-Awesome
-	url = https://github.com/FortAwesome/Font-Awesome.git
-[submodule "docs/themes/github.com/twbs/bootstrap"]
-	path = docs/themes/github.com/twbs/bootstrap
-	url = https://github.com/twbs/bootstrap.git
-[submodule "docs/themes/github.com/gohugoio/hugo-mod-bootstrap-scss/v5"]
-	path = docs/themes/github.com/gohugoio/hugo-mod-bootstrap-scss/v5
-	url = https://github.com/gohugoio/hugo-mod-bootstrap-scss.git
+[submodule "docs/themes/PaperMod"]
+	path = docs/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
