@@ -53,10 +53,30 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          echo "📦 Building Hugo site with debug info..."
+          echo "📁 Current directory: $(pwd)"
+          echo "📊 Hugo version: $(hugo version)"
+          echo "📋 Theme: $(grep 'theme:' config.yaml || echo 'No theme specified')"
+          
+          # Build with verbose output for debugging
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --verbose \
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            2>&1 | tee hugo-build.log
+          
+          # Check build status and show errors if any
+          if [ $? -eq 0 ]; then
+            echo "✅ Hugo build completed successfully!"
+            echo "📁 Output directory: docs/public/"
+            echo "📊 Files generated: $(find docs/public/ -type f | wc -l)"
+          else
+            echo "❌ Hugo build failed!"
+            echo "📋 Last 20 lines of build log:"
+            tail -20 hugo-build.log
+            exit 1
+          fi
         working-directory: docs
 
       - name: Upload artifact
