@@ -141,6 +141,27 @@ Image generation is now integrated with the provider system:
 * `/reset` - Clear conversation history
 * `/help` - Display all available commands
 
+## 🎛️ Admin Panel
+
+**NEW!** Streamlit-powered admin interface with Discord theme:
+
+```bash
+# Start admin panel
+python3 start_admin.py
+# Access at: http://localhost:8501
+```
+
+### Admin Features
+- 📊 **Real-time Dashboard** - System metrics, uptime, performance
+- 🤖 **Provider Management** - Configure AI providers and API keys
+- 🎭 **Persona Editor** - Create and edit AI personalities
+- 👥 **User Management** - Admin controls, permissions, bans
+- 💬 **Chat Monitor** - Live conversation monitoring
+- 📝 **Logs & Audit** - System logs and security audit trail
+- ⚙️ **Settings** - Global configuration management
+
+> **Note:** Admin panel requires `ADMIN_USER_IDS` to be configured in `.env`
+
 ### Persona Commands
 * `/switchpersona [persona]` - Switch AI personality (admin-only for jailbreaks)
    * `standard` - Standard helpful assistant
