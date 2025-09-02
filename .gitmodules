@@ -7,3 +7,6 @@
 [submodule "docs/themes/github.com/twbs/bootstrap"]
 	path = docs/themes/github.com/twbs/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "docs/themes/github.com/gohugoio/hugo-mod-bootstrap-scss/v5"]
+	path = docs/themes/github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+	url = https://github.com/gohugoio/hugo-mod-bootstrap-scss.git
