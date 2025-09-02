@@ -57,9 +57,9 @@ Se você já tem experiência com Discord bots, isso deve funcionar imediatament
 
 Antes de começar, certifique-se de ter:
 
-{{< tabs name="prerequisites" >}}
+{{< tabpane >}}
 
-{{% tab name="🐳 Docker (Recomendado)" %}}
+{{% tab header="🐳 Docker (Recomendado)" %}}
 - **Docker**: Versão 20.10 ou superior
 - **Docker Compose**: Versão 2.0 ou superior
 - **Git**: Para clonar o repositório
@@ -72,7 +72,7 @@ git --version
 ```
 {{% /tab %}}
 
-{{% tab name="🐍 Python Nativo" %}}
+{{% tab header="🐍 Python Nativo" %}}
 - **Python**: 3.9 ou superior  
 - **pip**: Gerenciador de pacotes Python
 - **Git**: Para clonar o repositório
@@ -85,7 +85,7 @@ git --version
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 🎮 Próximos Passos
 

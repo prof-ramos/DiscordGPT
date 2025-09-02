@@ -71,9 +71,9 @@ Descubra tudo o que o Discord ChatGPT Bot pode fazer!
 
 ### Provedores Suportados
 
-{{< tabs name="providers-features" >}}
+{{< tabpane >}}
 
-{{% tab name="🆓 Free" %}}
+{{% tab header="🆓 Free" %}}
 **Características:**
 - ✅ Totalmente gratuito
 - ✅ Sem configuração
@@ -86,7 +86,7 @@ Descubra tudo o que o Discord ChatGPT Bot pode fazer!
 - GPT-4 (proxy limitado)
 {{% /tab %}}
 
-{{% tab name="🧠 OpenAI" %}}
+{{% tab header="🧠 OpenAI" %}}
 **Características:**
 - ⭐⭐⭐⭐⭐ Melhor qualidade
 - 🚀 Muito rápido
@@ -100,7 +100,7 @@ Descubra tudo o que o Discord ChatGPT Bot pode fazer!
 - DALL-E 3 (imagens)
 {{% /tab %}}
 
-{{% tab name="🔮 Claude" %}}
+{{% tab header="🔮 Claude" %}}
 **Características:**
 - ⭐⭐⭐⭐⭐ Textos longos
 - 🛡️ Muito ético
@@ -113,7 +113,7 @@ Descubra tudo o que o Discord ChatGPT Bot pode fazer!
 - Claude 3 Opus
 {{% /tab %}}
 
-{{% tab name="🌟 Gemini" %}}
+{{% tab header="🌟 Gemini" %}}
 **Características:**
 - ⭐⭐⭐⭐ Custo-benefício
 - 🆓 Tier gratuito
@@ -125,7 +125,7 @@ Descubra tudo o que o Discord ChatGPT Bot pode fazer!
 - Gemini Pro Vision
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### Fallback Automático
 
@@ -145,9 +145,9 @@ graph TD
 
 ### Personas Padrão (Todos os Usuários)
 
-{{< tabs name="standard-personas" >}}
+{{< tabpane >}}
 
-{{% tab name="👤 Standard" %}}
+{{% tab header="👤 Standard" %}}
 ```
 Você é um assistente útil e prestativo.
 Responda de forma clara e educada.
@@ -159,7 +159,7 @@ Responda de forma clara e educada.
 - Conversas casuais
 {{% /tab %}}
 
-{{% tab name="🎨 Creative" %}}
+{{% tab header="🎨 Creative" %}}
 ```
 Você é criativo e imaginativo.
 Use linguagem expressiva e ideias inovadoras.
@@ -172,7 +172,7 @@ Pense fora da caixa.
 - Ideias inovadoras
 {{% /tab %}}
 
-{{% tab name="🔧 Technical" %}}
+{{% tab header="🔧 Technical" %}}
 ```
 Você é um especialista técnico.
 Forneça respostas precisas e detalhadas.
@@ -185,7 +185,7 @@ Use terminologia apropriada.
 - Documentação
 {{% /tab %}}
 
-{{% tab name="😎 Casual" %}}
+{{% tab header="😎 Casual" %}}
 ```
 Você é descontraído e amigável.
 Use linguagem informal e bem-humorada.
@@ -198,7 +198,7 @@ Seja como um amigo próximo.
 - Interações sociais
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### Personas Jailbreak (Apenas Admins)
 

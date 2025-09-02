@@ -82,9 +82,9 @@ DEFAULT_MODEL=gpt-4o-mini  # Mais barato
 
 ### Modelos Disponíveis
 
-{{< tabs name="openai-models" >}}
+{{< tabpane >}}
 
-{{% tab name="💬 Chat Models" %}}
+{{% tab header="💬 Chat Models" %}}
 - **`gpt-4o`** - Modelo mais avançado (mais caro)
 - **`gpt-4o-mini`** - Ótimo custo-benefício (recomendado)
 - **`gpt-3.5-turbo`** - Mais barato, boa qualidade
@@ -96,7 +96,7 @@ DEFAULT_MODEL=gpt-4o-mini  # Mais barato
 - GPT-3.5-turbo: $0.50 input / $1.50 output
 {{% /tab %}}
 
-{{% tab name="🖼️ Image Models" %}}
+{{% tab header="🖼️ Image Models" %}}
 - **`dall-e-3`** - Melhor qualidade
 - **`dall-e-2`** - Mais barato
 
@@ -110,7 +110,7 @@ DEFAULT_MODEL=gpt-4o-mini  # Mais barato
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### Configuração Avançada
 
@@ -253,9 +253,9 @@ GEMINI_KEY=sua_chave_gemini
 
 ### Configuração por Qualidade
 
-{{< tabs name="quality-config" >}}
+{{< tabpane >}}
 
-{{% tab name="🥇 Máxima Qualidade" %}}
+{{% tab header="🥇 Máxima Qualidade" %}}
 ```env
 DEFAULT_PROVIDER=openai
 OPENAI_KEY=sk-proj-sua_chave
@@ -266,7 +266,7 @@ CLAUDE_KEY=sk-ant-sua_chave
 ```
 {{% /tab %}}
 
-{{% tab name="⚡ Máxima Velocidade" %}}
+{{% tab header="⚡ Máxima Velocidade" %}}
 ```env
 DEFAULT_PROVIDER=openai
 OPENAI_KEY=sk-proj-sua_chave
@@ -277,7 +277,7 @@ GEMINI_KEY=sua_chave
 ```
 {{% /tab %}}
 
-{{% tab name="💰 Economia" %}}
+{{% tab header="💰 Economia" %}}
 ```env
 DEFAULT_PROVIDER=gemini  # Tier gratuito
 GEMINI_KEY=sua_chave
@@ -286,7 +286,7 @@ GEMINI_KEY=sua_chave
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 🎮 Trocar Provedores no Discord
 

@@ -27,9 +27,9 @@ Escolha um nome único e descritivo para seu bot. Este nome será visível para 
 2. Clique em **"Add Bot"** → **"Yes, do it!"**
 3. Configure as seguintes opções:
 
-{{< tabs name="bot-config" >}}
+{{< tabpane >}}
 
-{{% tab name="🔧 Configurações Básicas" %}}
+{{% tab header="🔧 Configurações Básicas" %}}
 
 **Username**: Nome que aparecerá no Discord
 - Escolha algo como "ChatGPT", "AI Assistant", etc.
@@ -40,7 +40,7 @@ Escolha um nome único e descritivo para seu bot. Este nome será visível para 
 
 {{% /tab %}}
 
-{{% tab name="🔒 Permissões de Bot" %}}
+{{% tab header="🔒 Permissões de Bot" %}}
 
 **Configurações importantes**:
 - ✅ **PUBLIC BOT**: Ativo (outros podem convidar)
@@ -55,7 +55,7 @@ Escolha um nome único e descritivo para seu bot. Este nome será visível para 
 
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### 3. Obter Token do Bot
 
@@ -77,9 +77,9 @@ Escolha um nome único e descritivo para seu bot. Este nome será visível para 
 
 3. Em **"Bot Permissions"**, selecione:
 
-{{< tabs name="permissions" >}}
+{{< tabpane >}}
 
-{{% tab name="🔧 Permissões Essenciais" %}}
+{{% tab header="🔧 Permissões Essenciais" %}}
 ```
 ✅ Send Messages              # Enviar mensagens
 ✅ Use Slash Commands         # Usar comandos /
@@ -90,7 +90,7 @@ Escolha um nome único e descritivo para seu bot. Este nome será visível para 
 ```
 {{% /tab %}}
 
-{{% tab name="📋 Lista Completa" %}}
+{{% tab header="📋 Lista Completa" %}}
 ```
 General Permissions:
 ✅ Read Messages/View Channels
@@ -113,7 +113,7 @@ Advanced Permissions (Opcional):
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 4. Copie a **URL gerada** na parte inferior
 
@@ -168,9 +168,9 @@ services:
 
 Execute seu bot e verifique os logs:
 
-{{< tabs name="test-bot" >}}
+{{< tabpane >}}
 
-{{% tab name="🐳 Docker" %}}
+{{% tab header="🐳 Docker" %}}
 ```bash
 # Iniciar bot
 docker compose up -d
@@ -184,7 +184,7 @@ docker logs chatgpt-discord-bot
 ```
 {{% /tab %}}
 
-{{% tab name="🐍 Python" %}}
+{{% tab header="🐍 Python" %}}
 ```bash
 # Executar bot
 python main.py
@@ -196,7 +196,7 @@ python main.py
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 🎮 Testar Comandos
 

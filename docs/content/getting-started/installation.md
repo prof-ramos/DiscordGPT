@@ -10,9 +10,9 @@ Este guia vai te ajudar a instalar o Discord ChatGPT Bot no seu sistema.
 
 ## 🎯 Métodos de Instalação
 
-{{< tabs name="install-methods" >}}
+{{< tabpane >}}
 
-{{% tab name="🐳 Docker (Recomendado)" %}}
+{{% tab header="🐳 Docker (Recomendado)" %}}
 
 ### Por que Docker?
 - ✅ **Mais fácil**: Sem problemas de dependências
@@ -50,7 +50,7 @@ Se você viu logs de conexão, o bot está funcionando! Agora configure o token 
 
 {{% /tab %}}
 
-{{% tab name="🐍 Python Nativo" %}}
+{{% tab header="🐍 Python Nativo" %}}
 
 ### Pré-requisitos
 - Python 3.9 ou superior
@@ -110,7 +110,7 @@ python main.py
 
 {{% /tab %}}
 
-{{% tab name="📦 Git Submodule" %}}
+{{% tab header="📦 Git Submodule" %}}
 
 ### Para Projetos Existentes
 
@@ -133,7 +133,7 @@ docker compose up -d
 
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 🔧 Dependências do Sistema
 

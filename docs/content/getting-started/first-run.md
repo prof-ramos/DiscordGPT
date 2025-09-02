@@ -10,9 +10,9 @@ Agora que você tem o bot instalado e configurado, vamos executá-lo pela primei
 
 ## 🚀 Execução Rápida
 
-{{< tabs name="run-bot" >}}
+{{< tabpane >}}
 
-{{% tab name="🐳 Docker" %}}
+{{% tab header="🐳 Docker" %}}
 ```bash
 # 1. Navegar para diretório do bot
 cd DiscordGPT
@@ -34,7 +34,7 @@ docker logs -f chatgpt-discord-bot
 ```
 {{% /tab %}}
 
-{{% tab name="🐍 Python" %}}
+{{% tab header="🐍 Python" %}}
 ```bash
 # 1. Ativar ambiente virtual
 source venv/bin/activate
@@ -57,7 +57,7 @@ python main.py
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 {{< alert title="🎉 Primeiro Sucesso!" color="success" >}}
 Se você viu os logs acima, seu bot está **online e funcionando**!
@@ -77,9 +77,9 @@ No Discord, digite:
 
 ### Comandos Essenciais
 
-{{< tabs name="first-commands" >}}
+{{< tabpane >}}
 
-{{% tab name="💬 Comandos de Chat" %}}
+{{% tab header="💬 Comandos de Chat" %}}
 ```bash
 # Conversa básica
 /chat Explique o que é inteligência artificial
@@ -95,7 +95,7 @@ No Discord, digite:
 ```
 {{% /tab %}}
 
-{{% tab name="🎭 Comandos de Personalidade" %}}
+{{% tab header="🎭 Comandos de Personalidade" %}}
 ```bash
 # Ver personalidades disponíveis
 /switchpersona
@@ -108,7 +108,7 @@ No Discord, digite:
 ```
 {{% /tab %}}
 
-{{% tab name="🖼️ Comandos de Imagem" %}}
+{{% tab header="🖼️ Comandos de Imagem" %}}
 ```bash
 # Gerar imagem (requer provedor premium)
 /draw Um gato fofo usando óculos de sol
@@ -118,7 +118,7 @@ No Discord, digite:
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 📊 Status do Sistema
 
@@ -183,9 +183,9 @@ ADMIN_USER_IDS=289558466551480320,311385521360
 
 ### Comandos Úteis
 
-{{< tabs name="monitoring" >}}
+{{< tabpane >}}
 
-{{% tab name="🐳 Docker" %}}
+{{% tab header="🐳 Docker" %}}
 ```bash
 # Ver status dos containers
 docker ps
@@ -204,7 +204,7 @@ docker compose down
 ```
 {{% /tab %}}
 
-{{% tab name="🐍 Python" %}}
+{{% tab header="🐍 Python" %}}
 ```bash
 # Ver processos Python
 ps aux | grep python
@@ -220,7 +220,7 @@ tail -f nohup.out
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### Logs Importantes
 

@@ -111,9 +111,9 @@ Configurações avançadas de container
 
 ### 🤖 Provedores Disponíveis
 
-{{< tabs name="providers-overview" >}}
+{{< tabpane >}}
 
-{{% tab name="🆓 Gratuito" %}}
+{{% tab header="🆓 Gratuito" %}}
 **Provedor**: `free` (g4f)
 - ✅ **Sem API key necessária**
 - ✅ **Funciona imediatamente**
@@ -126,7 +126,7 @@ DEFAULT_PROVIDER=free
 ```
 {{% /tab %}}
 
-{{% tab name="🧠 OpenAI" %}}
+{{% tab header="🧠 OpenAI" %}}
 **Provedor**: `openai`
 - ✅ **Melhor qualidade**
 - ✅ **GPT-4, DALL-E 3**
@@ -141,7 +141,7 @@ OPENAI_KEY=sk-proj-sua_chave_aqui
 [**Obter chave API →**](https://platform.openai.com/api-keys)
 {{% /tab %}}
 
-{{% tab name="🔮 Claude" %}}
+{{% tab header="🔮 Claude" %}}
 **Provedor**: `claude`
 - ✅ **Excelente para textos longos**
 - ✅ **Muito ético e seguro**
@@ -156,7 +156,7 @@ CLAUDE_KEY=sk-ant-sua_chave_aqui
 [**Obter chave API →**](https://console.anthropic.com/)
 {{% /tab %}}
 
-{{% tab name="🌟 Gemini" %}}
+{{% tab header="🌟 Gemini" %}}
 **Provedor**: `gemini`
 - ✅ **Bom custo-benefício**
 - ✅ **Integração com Google**
@@ -171,13 +171,13 @@ GEMINI_KEY=sua_chave_aqui
 [**Obter chave API →**](https://aistudio.google.com/app/apikey)
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ### 🎭 Sistema de Personalidades
 
-{{< tabs name="personas-overview" >}}
+{{< tabpane >}}
 
-{{% tab name="👤 Padrão (Todos)" %}}
+{{% tab header="👤 Padrão (Todos)" %}}
 Disponível para todos os usuários:
 
 - **`standard`** - Assistente útil padrão
@@ -190,7 +190,7 @@ Disponível para todos os usuários:
 ```
 {{% /tab %}}
 
-{{% tab name="🔓 Jailbreak (Admins)" %}}
+{{% tab header="🔓 Jailbreak (Admins)" %}}
 **⚠️ Apenas para administradores:**
 
 - **`jailbreak-v1`** - Modo BYPASS
@@ -212,7 +212,7 @@ Personas jailbreak podem gerar conteúdo que bypass medidas de segurança da IA.
 
 {{% /tab %}}
 
-{{< /tabs >}}
+{{< /tabpane >}}
 
 ## 🚀 Configurações de Performance
 
