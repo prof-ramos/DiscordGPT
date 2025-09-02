@@ -33,12 +33,32 @@ def run_discord_bot():
         message = message.replace('\x00', '')  # Remove null bytes
         message = message.strip()
         
+        # Additional sanitization
+        # Remove excessive whitespace
+        import re
+        message = re.sub(r'\s+', ' ', message)
+        
+        # Check for empty message after sanitization
         if not message:
             await interaction.response.send_message(
                 "❌ Please provide a message", 
                 ephemeral=True
             )
             return
+            
+        # Check for potentially harmful patterns (basic check)
+        harmful_patterns = [
+            r'<script[^>]*>.*?</script>',  # Basic XSS attempt
+            r'(javascript|vbscript|data):',  # Script protocols
+        ]
+        
+        for pattern in harmful_patterns:
+            if re.search(pattern, message, re.IGNORECASE):
+                await interaction.response.send_message(
+                    "❌ Message contains invalid content", 
+                    ephemeral=True
+                )
+                return
         
         if discordClient.is_replying_all:
             await interaction.response.defer(ephemeral=False)
