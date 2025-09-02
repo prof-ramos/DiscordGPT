@@ -2,6 +2,10 @@
 
 > ### Build your own Discord bot with multiple AI providers
 
+[![📚 Documentação](https://img.shields.io/badge/📚_Documentação-Hugo-blue?style=for-the-badge)](https://prof-ramos.github.io/DiscordGPT/)
+[![GitHub](https://img.shields.io/badge/GitHub-prof--ramos/DiscordGPT-black?style=for-the-badge&logo=github)](https://github.com/prof-ramos/DiscordGPT)
+[![✅ Testes](https://img.shields.io/badge/✅_Testes-72_passando-green?style=for-the-badge)](https://github.com/prof-ramos/DiscordGPT/actions)
+
 ---
 > [!IMPORTANT]
 >
@@ -168,3 +172,26 @@ Jailbreak personas require admin privileges for enhanced security:
 - Secure API key management via environment variables
 - Docker security hardening with non-root user
 - Read-only filesystem for container security
+
+---
+
+## 📚 Documentação Completa
+
+Para documentação detalhada, tutoriais e guias avançados:
+
+### 🌐 **[Acesse a Documentação Oficial](https://prof-ramos.github.io/DiscordGPT/)**
+
+A documentação inclui:
+- 🚀 **Guia de início rápido** (30 segundos)
+- ⚙️ **Configuração detalhada** de provedores
+- 🎭 **Sistema de personalidades** explicado
+- 🔒 **Configurações de segurança**
+- 🐳 **Deploy com Docker**
+- 📚 **API Reference** completa
+- 🛠️ **Guia de desenvolvimento**
+
+> **💡 Nova Documentação!** Migração completa para Hugo com interface moderna e busca integrada.
+
+---
+
+**⚡ Divirta-se conversando com a IA!**
