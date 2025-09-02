@@ -1,219 +1,187 @@
-# ChatGPT Discord Bot
+# Bot ChatGPT para Discord
 
-> ### Build your own Discord bot with multiple AI providers
-
-[![📚 Documentação](https://img.shields.io/badge/📚_Documentação-Hugo-blue?style=for-the-badge)](https://prof-ramos.github.io/DiscordGPT/)
-[![GitHub](https://img.shields.io/badge/GitHub-prof--ramos/DiscordGPT-black?style=for-the-badge&logo=github)](https://github.com/prof-ramos/DiscordGPT)
-[![✅ Testes](https://img.shields.io/badge/✅_Testes-72_passando-green?style=for-the-badge)](https://github.com/prof-ramos/DiscordGPT/actions)
+> ### Crie seu próprio bot para Discord com múltiplos provedores de IA
 
 ---
+
 > [!IMPORTANT]
 >
-> **Major Refactor (2025/07):**
-> - **5 AI Providers**: Free (g4f), OpenAI, Claude, Gemini, Grok
-> - **No Cookie Authentication**: Removed unreliable cookie-based auth for free providers
+> **Grande Refatoração (2025/07):**
+> - **5 Provedores de IA**: Gratuito (g4f), OpenAI, Claude, Gemini, Grok
+> - **Sem Autenticação por Cookies**: Removida a autenticação baseada em cookies para provedores gratuitos
 
 ### Chat
 
 ![image](https://user-images.githubusercontent.com/89479282/206497774-47d960cd-1aeb-4fba-9af5-1f9d6ff41f00.gif)
 
-# Setup
-## Prerequisites
-* **Python 3.9 or later**
-* **Rename the file `.env.example` to `.env`**
-* Running `pip3 install -r requirements.txt` to install the required dependencies
-* Optional: API keys for premium providers (OpenAI, Claude, Gemini, Grok)
----
-## Step 1: Create a Discord bot
+# Configuração
 
-1. Go to https://discord.com/developers/applications create an application
-2. Build a Discord bot under the application
-3. Get the token from bot setting
+## Pré-requisitos
+
+* **Python 3.9 ou superior**
+* **Renomeie o arquivo `.env.example` para `.env`**
+* Execute `pip3 install -r requirements.txt` para instalar as dependências necessárias
+* Opcional: Chaves de API para provedores premium (OpenAI, Claude, Gemini, Grok)
+
+---
+
+## Passo 1: Crie um bot no Discord
+
+1. Acesse https://discord.com/developers/applications e crie uma aplicação
+2. Crie um bot dentro da aplicação
+3. Obtenha o token nas configurações do bot
 
    ![image](https://user-images.githubusercontent.com/89479282/205949161-4b508c6d-19a7-49b6-b8ed-7525ddbef430.png)
-4. Store the token to `.env` under the `DISCORD_BOT_TOKEN`
+4. Armazene o token no arquivo `.env` na variável `DISCORD_BOT_TOKEN`
 
    <img height="190" width="390" alt="image" src="https://user-images.githubusercontent.com/89479282/222661803-a7537ca7-88ae-4e66-9bec-384f3e83e6bd.png">
 
-5. Turn MESSAGE CONTENT INTENT `ON`
+5. Ative o MESSAGE CONTENT INTENT
 
    ![image](https://user-images.githubusercontent.com/89479282/205949323-4354bd7d-9bb9-4f4b-a87e-deb9933a89b5.png)
 
-6. Invite your bot to your server via OAuth2 URL Generator
+6. Convide seu bot para o servidor usando o gerador de URL OAuth2
 
    ![image](https://user-images.githubusercontent.com/89479282/205949600-0c7ddb40-7e82-47a0-b59a-b089f929d177.png)
 
+## Passo 2: Execute o bot no desktop
 
+1. Abra um terminal ou prompt de comando
+2. Navegue até o diretório onde você instalou o bot ChatGPT para Discord
+3. Execute `python3 main.py` ou `python main.py` para iniciar o bot
 
-## Step 2: Run the bot on the desktop
-
-1. Open a terminal or command prompt
-
-2. Navigate to the directory where you installed the ChatGPT Discord bot
-
-3. Run `python3 main.py` or `python main.py` to run the bot
----
-## Step 2: Run the bot with Docker
-
-1. Build the Docker image & run the Docker container with `docker compose up -d`
-
-2. Inspect whether the bot works well `docker logs -t chatgpt-discord-bot`
-
-   ### Stop the bot:
-
-   * `docker ps` to see the list of running services
-   * `docker stop <BOT CONTAINER ID>` to stop the running bot
-
-### Have a good chat!
 ---
 
-## Provider Configuration
+## Passo 2: Execute o bot com Docker
 
-### Free Provider (unstable)
-Outdated model, close to GPT-3.5 or GPT-4 capabilities
+1. Construa a imagem Docker e execute o container com `docker compose up -d`
+2. Verifique se o bot está funcionando com `docker logs -t chatgpt-discord-bot`
 
-No configuration required
+   ### Pare o bot:
 
-### Premium Providers (Optional)
+   * `docker ps` para ver a lista de serviços em execução
+   * `docker stop <BOT CONTAINER ID>` para parar o bot em execução
+
+### Boa conversa!
+
+---
+
+## Configuração de Provedores
+
+### Provedor Gratuito (instável)
+
+Modelo desatualizado, com capacidades próximas ao GPT-3.5 ou GPT-4
+
+Nenhuma configuração necessária
+
+### Provedores Premium (Opcional)
 
 #### OpenAI
-1. Obtain your API key from https://platform.openai.com/api-keys
-2. Add to `.env`: `OPENAI_KEY=your_api_key_here`
+
+1. Obtenha sua chave de API em https://platform.openai.com/api-keys
+2. Adicione ao `.env`: `OPENAI_KEY=sua_chave_api_aqui`
 
 #### Claude (Anthropic)
-1. Get API key from https://console.anthropic.com/
-2. Add to `.env`: `CLAUDE_KEY=your_api_key_here`
+
+1. Obtenha a chave de API em https://console.anthropic.com/
+2. Adicione ao `.env`: `CLAUDE_KEY=sua_chave_api_aqui`
 
 #### Gemini (Google)
-1. Get API key from https://ai.google.dev/
-2. Add to `.env`: `GEMINI_KEY=your_api_key_here`
+
+1. Obtenha a chave de API em https://ai.google.dev/
+2. Adicione ao `.env`: `GEMINI_KEY=sua_chave_api_aqui`
 
 #### Grok (xAI)
-1. Get API key from https://x.ai/api
-2. Add to `.env`: `GROK_KEY=your_api_key_here`
 
-Use `/provider` command in Discord to switch between available providers
+1. Obtenha a chave de API em https://x.ai/api
+2. Adicione ao `.env`: `GROK_KEY=sua_chave_api_aqui`
 
-## Image Generation
+Use o comando `/provider` no Discord para alternar entre os provedores disponíveis
+
+## Geração de Imagens
 
 <img src="https://i.imgur.com/Eo1ZzKk.png" width="300" alt="image">
 
-Image generation is now integrated with the provider system:
+A geração de imagens agora está integrada ao sistema de provedores:
 
 ### OpenAI DALL-E 3
-- Requires OpenAI API key
-- High-quality image generation
+
+- Requer chave de API da OpenAI
+- Geração de imagens de alta qualidade
 - Use `/draw [prompt] openai`
 
 ### Google Gemini
-- Requires Gemini API key  
-- Free tier available
+
+- Requer chave de API do Gemini  
+- Camada gratuita disponível
 - Use `/draw [prompt] gemini`
 
-### Fallback Options
-- If premium providers are unavailable, the bot will attempt to use free alternatives
-- Image generation capabilities vary by provider availability
+### Opções de Fallback
 
-## Optional: Setup system prompt
+- Se os provedores premium não estiverem disponíveis, o bot tentará usar alternativas gratuitas
+- Os recursos de geração de imagens variam conforme a disponibilidade dos provedores
 
-* A system prompt would be invoked when the bot is first started or reset
-* You can set it up by modifying the content in `system_prompt.txt`
-* All the text in the file will be fired as a prompt to the bot
-* Get the first message from ChatGPT in your discord channel!
-* Go Discord setting turn `developer mode` on
+## Opcional: Configurar prompt do sistema
 
-  1. Right-click the channel you want to recieve the message, `Copy  ID`
+* Um prompt do sistema será acionado quando o bot for iniciado ou reiniciado
+* Você pode configurá-lo modificando o conteúdo em `system_prompt.txt`
+* Todo o texto no arquivo será enviado como prompt para o bot
+* Receba a primeira mensagem do ChatGPT no seu canal do Discord!
+* Nas configurações do Discord, ative o `modo desenvolvedor`
 
-       ![channel-id](https://user-images.githubusercontent.com/89479282/207697217-e03357b3-3b3d-44d0-b880-163217ed4a49.PNG)
+   1. Clique com o botão direito no canal onde deseja receber a mensagem, `Copiar ID`
 
-  2. paste it into `.env` under `DISCORD_CHANNEL_ID`
+        ![channel-id](https://user-images.githubusercontent.com/89479282/207697217-e03357b3-3b3d-44d0-b880-163217ed4a49.PNG)
 
-## Optional: Disable logging
+   2. Cole no `.env` na variável `DISCORD_CHANNEL_ID`
 
-* Set the value of `LOGGING` in the `.env` to False
+## Opcional: Desativar logs
 
-## Commands
+* Defina o valor de `LOGGING` no `.env` como False
 
-### Core Commands
-* `/chat [message]` - Chat with the current AI provider
-* `/provider` - Switch between AI providers (Free, OpenAI, Claude, Gemini, Grok)
-* `/draw [prompt] [model]` - Generate images with specified provider
-* `/reset` - Clear conversation history
-* `/help` - Display all available commands
+## Comandos
 
-## 🎛️ Admin Panel
+### Comandos Principais
 
-**NEW!** Streamlit-powered admin interface with Discord theme:
+* `/chat [mensagem]` - Conversa com o provedor de IA atual
+* `/provider` - Alterna entre provedores de IA (Gratuito, OpenAI, Claude, Gemini, Grok)
+* `/draw [prompt] [modelo]` - Gera imagens com o provedor especificado
+* `/reset` - Limpa o histórico da conversa
+* `/help` - Exibe todos os comandos disponíveis
 
-```bash
-# Start admin panel
-python3 start_admin.py
-# Access at: http://localhost:8501
-```
+### Comandos de Persona
 
-### Admin Features
-- 📊 **Real-time Dashboard** - System metrics, uptime, performance
-- 🤖 **Provider Management** - Configure AI providers and API keys
-- 🎭 **Persona Editor** - Create and edit AI personalities
-- 👥 **User Management** - Admin controls, permissions, bans
-- 💬 **Chat Monitor** - Live conversation monitoring
-- 📝 **Logs & Audit** - System logs and security audit trail
-- ⚙️ **Settings** - Global configuration management
+* `/switchpersona [persona]` - Alterna a personalidade da IA (somente administradores para jailbreaks)
+   * `standard` - Assistente padrão e prestativo
+   * `creative` - Respostas mais criativas e imaginativas  
+   * `technical` - Respostas técnicas e precisas
+   * `casual` - Tom casual e amigável
+   * `jailbreak-v1` - Modo BYPASS (somente administradores)
+   * `jailbreak-v2` - Modo SAM (somente administradores)
+   * `jailbreak-v3` - Modo Developer Plus (somente administradores)
 
-> **Note:** Admin panel requires `ADMIN_USER_IDS` to be configured in `.env`
+### Comportamento do Bot
 
-### Persona Commands
-* `/switchpersona [persona]` - Switch AI personality (admin-only for jailbreaks)
-   * `standard` - Standard helpful assistant
-   * `creative` - More creative and imaginative responses  
-   * `technical` - Technical and precise responses
-   * `casual` - Casual and friendly tone
-   * `jailbreak-v1` - BYPASS mode (admin only)
-   * `jailbreak-v2` - SAM mode (admin only)
-   * `jailbreak-v3` - Developer Mode Plus (admin only)
+* `/private` - Respostas do bot visíveis apenas para o usuário que enviou o comando
+* `/public` - Respostas do bot visíveis para todos (padrão)
+* `/replyall` - Bot responde a todas as mensagens no canal (alternar)
 
-### Bot Behavior
-* `/private` - Bot replies only visible to command user
-* `/public` - Bot replies visible to everyone (default)
-* `/replyall` - Bot responds to all messages in channel (toggle)
+## Recursos de Segurança
 
-## Security Features
+### Acesso Restrito ao Jailbreak
 
-### Admin-Only Jailbreak Access
-Jailbreak personas require admin privileges for enhanced security:
+Personas de jailbreak requerem privilégios de administrador para maior segurança:
 
-1. Set `ADMIN_USER_IDS` in `.env` with comma-separated Discord user IDs
-2. Only admin users can access jailbreak personas
-3. Regular users see only safe personas in `/switchpersona`
+1. Defina `ADMIN_USER_IDS` no `.env` com os IDs de usuários do Discord separados por vírgula
+2. Apenas usuários administradores podem acessar personas de jailbreak
+3. Usuários comuns veem apenas personas seguras em `/switchpersona`
 
-> **Warning**
-> Jailbreak personas may generate content that bypasses normal AI safety measures. Admin access required.
+> **Aviso**
+> Personas de jailbreak podem gerar conteúdo que ignora as medidas normais de segurança da IA. Requer acesso de administrador.
 
-### Environment Security
-- No cookie-based authentication (removed for reliability)
-- Secure API key management via environment variables
-- Docker security hardening with non-root user
-- Read-only filesystem for container security
+### Segurança do Ambiente
 
----
-
-## 📚 Documentação Completa
-
-Para documentação detalhada, tutoriais e guias avançados:
-
-### 🌐 **[Acesse a Documentação Oficial](https://prof-ramos.github.io/DiscordGPT/)**
-
-A documentação inclui:
-- 🚀 **Guia de início rápido** (30 segundos)
-- ⚙️ **Configuração detalhada** de provedores
-- 🎭 **Sistema de personalidades** explicado
-- 🔒 **Configurações de segurança**
-- 🐳 **Deploy com Docker**
-- 📚 **API Reference** completa
-- 🛠️ **Guia de desenvolvimento**
-
-> **💡 Nova Documentação!** Migração completa para Hugo com interface moderna e busca integrada.
-
----
-
-**⚡ Divirta-se conversando com a IA!**
+- Nenhuma autenticação baseada em cookies (removida para maior confiabilidade)
+- Gerenciamento seguro de chaves de API por meio de variáveis de ambiente
+- Reforço de segurança no Docker com usuário não-root
+- Sistema de arquivos somente leitura para segurança do container
