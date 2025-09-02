@@ -79,6 +79,8 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/public/
+docs/.hugo_build.lock
 
 # PyBuilder
 .pybuilder/
@@ -168,3 +170,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 Pipfile*
+.gemini/
+gha-creds-*.json

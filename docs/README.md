@@ -1,221 +1,75 @@
-# 📚 Documentação Discord ChatGPT Bot
+# Documentation Shortcodes and UI Shims
 
-Esta é a documentação oficial do [Discord ChatGPT Bot](https://github.com/prof-ramos/DiscordGPT) construída com [Hugo](https://gohugo.io/).
+This docs site uses a few lightweight shortcodes to keep content portable and Hugo builds deterministic. They are theme-agnostic shims designed to work with PaperMod.
 
-## 🚀 Acesso Rápido
+## Tabs
 
-- **📖 Documentação Online**: [prof-ramos.github.io/DiscordGPT](https://prof-ramos.github.io/DiscordGPT/)
-- **🏠 Repositório Principal**: [github.com/prof-ramos/DiscordGPT](https://github.com/prof-ramos/DiscordGPT)
-
-## 🏗️ Estrutura
+Usage:
 
 ```
-docs/
-├── config.yaml              # Configuração Hugo
-├── content/                  # Conteúdo da documentação
-│   ├── _index.md            # Homepage
-│   ├── getting-started/     # Guia inicial
-│   ├── configuration/       # Configurações
-│   ├── features/           # Funcionalidades
-│   ├── api/                # API Reference
-│   ├── deployment/         # Deploy
-│   └── development/        # Desenvolvimento
-├── static/                  # Assets estáticos
-├── layouts/                 # Templates personalizados
-└── themes/                  # Tema Hugo
+{{< tabs name="example-tabs" >}}
+{{% tab name="🐳 Docker" %}}
+Conteúdo para Docker.
+{{% /tab %}}
+{{% tab name="🐍 Python" %}}
+Conteúdo para Python.
+{{% /tab %}}
+{{< /tabs >}}
 ```
 
-## 🛠️ Desenvolvimento Local
+- Params: `name` (string, optional; used to scope IDs). Child `tab` accepts `name` (or `title`).
+- Behavior: Renders simple blocks; JS builds the tablist with keyboard navigation and ARIA.
 
-### Pré-requisitos
+## Cards
 
-- [Hugo Extended](https://gohugo.io/installation/) v0.128+
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (para dependências do tema)
-
-### Setup Local
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/prof-ramos/DiscordGPT.git
-cd DiscordGPT/docs
-
-# 2. Instalar tema (se necessário)
-git submodule update --init --recursive
-
-# 3. Instalar dependências Node.js (se houver)
-npm install
-
-# 4. Executar servidor local
-hugo server -D
-
-# 5. Abrir no navegador
-# http://localhost:1313
+```
+{{< cardpane >}}
+{{< card header="**Título**" >}}Conteúdo do card{{< /card >}}
+{{< card header="Outro" >}}Outro conteúdo{{< /card >}}
+{{< /cardpane >}}
 ```
 
-### Comandos Úteis
+- Params: `header` (markdown enabled). Card items render directly inside a responsive grid.
 
-```bash
-# Servidor com drafts e live reload
-hugo server -D --disableFastRender
+## Alerts
 
-# Build para produção
-hugo --gc --minify
-
-# Verificar links quebrados
-hugo --printUnusedTemplates --printI18nWarnings
+```
+{{< alert title="🎉 Pronto!" color="success" >}}
+Mensagem de sucesso.
+{{< /alert >}}
 ```
 
-## 🎨 Tema e Estilo
+- Params: `title` (string), `color` (`info`, `success`, `warning`, `danger`).
 
-- **Tema Base**: [Docsy](https://www.docsy.dev/)
-- **Customizações**: Cores, logos, layouts específicos
-- **Responsive**: Otimizado para desktop e mobile
-- **Dark Mode**: Suporte a tema escuro/claro
-- **Busca**: Busca full-text integrada
+## Blocks (compat)
 
-## 📝 Contribuindo
+Hero/sections/features used on the homepage:
 
-### Adicionando Conteúdo
+```
+{{< blocks/cover title="Titulo" color="primary" height="min" >}}
+Conteúdo opcional
+{{< /blocks/cover >}}
 
-1. **Criar nova página:**
-   ```bash
-   hugo new content/nova-secao/pagina.md
-   ```
+{{% blocks/lead color="white" %}}Texto em destaque{{% /blocks/lead %}}
 
-2. **Estrutura do frontmatter:**
-   ```yaml
-   ---
-   title: "Título da Página"
-   description: "Descrição para SEO"
-   weight: 10
-   draft: false
-   toc: true
-   ---
-   ```
-
-3. **Shortcodes disponíveis:**
-   ```markdown
-   {{< alert title="Título" color="info" >}}
-   Conteúdo do alerta
-   {{< /alert >}}
-
-   {{< tabs name="exemplo" >}}
-   {{% tab name="Tab 1" %}}
-   Conteúdo da tab 1
-   {{% /tab %}}
-   {{< /tabs >}}
-   ```
-
-### Guidelines de Escrita
-
-- **Linguagem**: Português brasileiro
-- **Tom**: Profissional mas acessível
-- **Estrutura**: Usar headings (H1, H2, H3) consistentemente
-- **Código**: Sempre incluir exemplos práticos
-- **Links**: Usar links internos quando possível
-
-## 🚀 Deploy
-
-### GitHub Pages (Automático)
-
-O deploy é feito automaticamente via GitHub Actions quando:
-- Push para branch `main`
-- Mudanças no diretório `docs/`
-
-Configuração em `.github/workflows/hugo.yml`.
-
-### Deploy Manual
-
-```bash
-# Build
-hugo --gc --minify --baseURL "https://prof-ramos.github.io/DiscordGPT/"
-
-# Deploy para GitHub Pages
-# (feito automaticamente via Actions)
+{{% blocks/section color="primary" type="row" %}}
+{{% blocks/feature icon="fas fa-robot" title="Recurso" %}}Descrição{{% /blocks/feature %}}
+{{% /blocks/section %}}
 ```
 
-## 📊 Analytics e SEO
+- `blocks/cover`: Params `title`, `color`, `height`, `image_anchor`.
+- `blocks/lead`: Param `color`.
+- `blocks/section`: Params `color`, `type` (`row`|`stack`).
+- `blocks/feature`: Params `icon`, `title`, `url`.
+- `blocks/link-down`: Visual hint to scroll (no params required; optional `color`).
 
-### Configurações SEO
+## Accessibility and Styling
 
-- **Sitemap**: Gerado automaticamente
-- **RSS**: Feed disponível
-- **Meta tags**: OpenGraph e Twitter Cards
-- **Schema.org**: Marcação estruturada
+- Tabs implement ARIA roles (`tablist`, `tab`, `tabpanel`) and keyboard: Left/Right, Home/End, Enter/Space.
+- CSS uses PaperMod tokens: `--primary`, `--border`, `--entry`, `--tertiary`. Minimal overrides only.
 
-### Analytics
+## CI and Build
 
-Configurado no `config.yaml`:
-```yaml
-params:
-  google_analytics: "G-XXXXXXXXXX"  # Se configurado
-```
+- GitHub Actions pins Hugo extended to `0.149.0` for consistent builds.
+- Local build: `cd docs && hugo --minify`. Preview: `hugo server`.
 
-## 🔧 Configurações Avançadas
-
-### Customização do Tema
-
-```yaml
-# config.yaml
-params:
-  ui:
-    sidebar_menu_compact: true
-    breadcrumb_disable: false
-    sidebar_search_disable: false
-    navbar_logo: true
-  
-  # Cores personalizadas
-  primary_color: "#1e88e5"
-  secondary_color: "#00acc1"
-```
-
-### Funcionalidades Especiais
-
-- **Copy Code**: Botões automáticos para copiar código
-- **Edit Page**: Links para editar no GitHub
-- **Last Modified**: Data da última modificação
-- **Print**: Otimização para impressão
-
-## 🆘 Troubleshooting
-
-### Problemas Comuns
-
-**Hugo não encontrado:**
-```bash
-# Instalar Hugo Extended
-brew install hugo  # macOS
-# ou baixar do GitHub Releases
-```
-
-**Servidor não inicia:**
-```bash
-# Verificar versão
-hugo version
-
-# Limpar cache
-hugo --gc
-```
-
-**Tema não carrega:**
-```bash
-# Atualizar submodules
-git submodule update --remote --merge
-```
-
-### Logs de Build
-
-```bash
-# Build com logs detalhados
-hugo --verbose --debug
-```
-
-## 📞 Suporte
-
-- **Issues**: [GitHub Issues](https://github.com/prof-ramos/DiscordGPT/issues)
-- **Discussões**: [GitHub Discussions](https://github.com/prof-ramos/DiscordGPT/discussions)
-- **Hugo Docs**: [gohugo.io/documentation](https://gohugo.io/documentation/)
-
-## 📜 Licença
-
-Esta documentação está sob a mesma licença do projeto principal (MIT). Ver [LICENSE](../LICENSE) no repositório principal.

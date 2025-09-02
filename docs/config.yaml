@@ -1,7 +1,7 @@
 baseURL: 'https://prof-ramos.github.io/DiscordGPT'
 languageCode: 'pt-br'
 title: 'Discord ChatGPT Bot - Documentação'
-theme: 'docsy'
+theme: 'PaperMod'
 
 # Hugo Configuration
 enableRobotsTXT: true
@@ -44,57 +44,7 @@ menu:
       url: "/development/"
       weight: 70
 
-# Params
-params:
-  # Repository
-  github_repo: 'https://github.com/prof-ramos/DiscordGPT'
-  github_branch: 'main'
-  
-  # Search
-  offlineSearch: true
-  
-  # Edit page
-  github_url: 'https://github.com/prof-ramos/DiscordGPT'
-  edit_page: true
-  
-  # Version
-  version: "2.0"
-  
-  # UI Configuration
-  ui:
-    sidebar_menu_compact: true
-    breadcrumb_disable: false
-    sidebar_search_disable: false
-    navbar_logo: true
-    feedback:
-      enable: true
-      'yes': 'Muito útil - obrigado!'
-      'no': 'Desculpe por isso. Diga-nos como podemos melhorar?'
-    
-    # Color theme
-    primary_color: "#1e88e5"
-    secondary_color: "#00acc1"
-  
-  # Links
-  links:
-    user:
-      - name: "Discord Server"
-        url: "https://discord.gg/example"
-        icon: "fab fa-discord"
-        desc: "Junte-se à nossa comunidade Discord"
-      - name: "GitHub Discussions"
-        url: "https://github.com/prof-ramos/DiscordGPT/discussions"
-        icon: "fab fa-github"
-        desc: "Discussões e suporte"
-    developer:
-      - name: "GitHub"
-        url: "https://github.com/prof-ramos/DiscordGPT"
-        icon: "fab fa-github"
-        desc: "Código fonte do projeto"
-      - name: "Issues"
-        url: "https://github.com/prof-ramos/DiscordGPT/issues"
-        icon: "fas fa-bug"
-        desc: "Reporte bugs ou solicite funcionalidades"
+
 
 # Build
 build:
