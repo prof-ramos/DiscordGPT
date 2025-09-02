@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configuração on Discord ChatGPT Bot - Documentação</title><link>https://prof-ramos.github.io/DiscordGPT/configuration/</link><description>Recent content in Configuração on Discord ChatGPT Bot - Documentação</description><generator>Hugo</generator><language>pt-br</language><atom:link href="https://prof-ramos.github.io/DiscordGPT/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Provedores de IA</title><link>https://prof-ramos.github.io/DiscordGPT/configuration/providers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://prof-ramos.github.io/DiscordGPT/configuration/providers/</guid><description>&lt;h1 id="-configuração-de-provedores-de-ia"&gt;🤖 Configuração de Provedores de IA&lt;/h1&gt;
 &lt;p&gt;O Discord ChatGPT Bot suporta múltiplos provedores de IA com fallback automático para máxima confiabilidade.&lt;/p&gt;
 &lt;h2 id="-provedores-disponíveis"&gt;🎯 Provedores Disponíveis&lt;/h2&gt;
-&lt;div class="alert alert-info" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;💡 Como Funciona&lt;/div&gt;
-
-
+&lt;div class="alert alert--info"&gt;&lt;div class="alert-title"&gt;💡 Como Funciona&lt;/div&gt;&lt;div class="alert-body"&gt;
 O bot tenta usar o **provedor padrão** primeiro. Se falhar, automaticamente tenta outros provedores disponíveis.
 &lt;/div&gt;
+ &lt;/div&gt;
+
 
 &lt;table&gt;
  &lt;thead&gt;
@@ -83,11 +83,11 @@ O bot tenta usar o **provedor padrão** primeiro. Se falhar, automaticamente ten
 &lt;li&gt;&lt;code&gt;gpt-3.5-turbo&lt;/code&gt; - Via proxy gratuito&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gpt-4&lt;/code&gt; - Via proxy gratuito (limitado)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="alert alert-info" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;📝 Nota&lt;/div&gt;
-
-
+&lt;div class="alert alert--info"&gt;&lt;div class="alert-title"&gt;📝 Nota&lt;/div&gt;&lt;div class="alert-body"&gt;
 O provedor gratuito é perfeito para testar o bot, mas para uso em produção recomendamos APIs premium.
 &lt;/div&gt;
+ &lt;/div&gt;
+
 
 &lt;h2 id="-2-openai"&gt;🧠 2. OpenAI&lt;/h2&gt;
 &lt;h3 id="características-1"&gt;Características&lt;/h3&gt;
@@ -105,11 +105,11 @@ O provedor gratuito é perfeito para testar o bot, mas para uso em produção re
 &lt;li&gt;&lt;strong&gt;Nomeie&lt;/strong&gt; a chave (ex: &amp;ldquo;Discord Bot&amp;rdquo;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Copie&lt;/strong&gt; a chave que aparece&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;💳 Billing&lt;/div&gt;
-
-
+&lt;div class="alert alert--warning"&gt;&lt;div class="alert-title"&gt;💳 Billing&lt;/div&gt;&lt;div class="alert-body"&gt;
 Você precisa adicionar um método de pagamento na OpenAI para usar a API.
 &lt;/div&gt;
+ &lt;/div&gt;
+
 
 &lt;h3 id="configuração-1"&gt;Configuração&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
@@ -133,171 +133,13 @@ Você precisa adicionar um método de pagamento na OpenAI para usar a API.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="modelos-disponíveis-1"&gt;Modelos Disponíveis&lt;/h3&gt;
+&lt;div class="tabs" id="tabs-1756810874291977000" data-tabs-id="tabs-1756810874291977000"&gt;
 
-
-
-
-
-
-&lt;ul class="nav nav-tabs" id="tabs-3" role="tablist"&gt;
- &lt;li class="nav-item"&gt;
- &lt;button class="nav-link active"
- id="tabs-03-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-03-00" role="tab"
- aria-controls="tabs-03-00" aria-selected="true"&gt;
- 💬 Chat Models
- &lt;/button&gt;
- &lt;/li&gt;&lt;li class="nav-item"&gt;
- &lt;button class="nav-link"
- id="tabs-03-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-03-01" role="tab"
- aria-controls="tabs-03-01" aria-selected="false"&gt;
- 🖼️ Image Models
- &lt;/button&gt;
- &lt;/li&gt;
+&lt;div class="tab" data-title=""&gt;
+ &lt;div class="tab-content"&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;gpt-4o&lt;/code&gt;&lt;/strong&gt; - Modelo mais avançado (mais caro)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;gpt-4o-mini&lt;/code&gt;&lt;/strong&gt; - Ótimo custo-benefício (recomendado)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;gpt-3.5-turbo&lt;/code&gt;&lt;/strong&gt; - Mais barato, boa qualidade&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;gpt-4-turbo&lt;/code&gt;&lt;/strong&gt; - Anterior flagship model&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;div class="tab-content" id="tabs-3-content"&gt;
- &lt;div class="tab-pane fade show active"
- id="tabs-03-00" role="tabpanel" aria-labelled-by="tabs-03-00-tab" tabindex="3"&gt;
- &lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 6
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 7
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 8
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 9
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;10
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;11
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;gpt-4o&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Modelo mais avançado (mais caro)&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;gpt-4o-mini&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Ótimo custo-benefício (recomendado)&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;gpt-3.5-turbo&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Mais barato, boa qualidade&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;gpt-4-turbo&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Anterior flagship model&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Preços aproximados (por 1M tokens):&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;GPT-4o: $5.00 input / $15.00 output&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;GPT-4o-mini: $0.15 input / $0.60 output&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;GPT-3.5-turbo: $0.50 input / $1.50 output&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class="tab-pane fade"
- id="tabs-03-01" role="tabpanel" aria-labelled-by="tabs-03-01-tab" tabindex="3"&gt;
- &lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 6
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 7
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 8
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 9
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;10
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;11
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;12
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;13
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;14
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;15
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;16
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;17
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;18
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;19
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;dall-e-3&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Melhor qualidade&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;code&amp;gt;dall-e-2&amp;lt;/code&amp;gt;&amp;lt;/strong&amp;gt; - Mais barato&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Preços:&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;DALL-E 3: $0.040 por imagem (1024x1024)&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;li&amp;gt;DALL-E 2: $0.020 por imagem (1024x1024)&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Usar:&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;div style=&amp;#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;table style=&amp;#34;border-spacing:0;padding:0;margin:0;border:0;&amp;#34;&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td style=&amp;#34;vertical-align:top;padding:0;margin:0;border:0;&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code&amp;gt;&amp;lt;span style=&amp;#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&amp;#34;&amp;gt;1
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/td&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;td style=&amp;#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-fallback&amp;#34; data-lang=&amp;#34;fallback&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;/draw Um gato astronauta no espaço
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/table&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/div&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id="configuração-avançada"&gt;Configuração Avançada&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-env" data-lang="env"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# Usar modelo específico&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;DEFAULT_MODEL&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;gpt-4o-mini
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# Configurações de temperatura e máx tokens (futuro)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;OPENAI_TEMPERATURE&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;0.7
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;OPENAI_MAX_TOKENS&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#0550ae"&gt;2000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id="-3-claude-anthropic"&gt;🔮 3. Claude (Anthropic)&lt;/h2&gt;
-&lt;h3 id="características-2"&gt;Características&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;⭐⭐⭐⭐⭐ &lt;strong&gt;Excelente para textos longos&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;🛡️ &lt;strong&gt;Muito ético e seguro&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;📝 &lt;strong&gt;Ótimo para análise de código&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;💰 &lt;strong&gt;Pago por uso&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="como-obter-chave-api-1"&gt;Como Obter Chave API&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Acesse:&lt;/strong&gt; &lt;a href="https://console.anthropic.com/"&gt;console.anthropic.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Crie conta&lt;/strong&gt; ou faça login&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vá para&lt;/strong&gt; &amp;ldquo;API Keys&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Clique&lt;/strong&gt; em &amp;ldquo;Create Key&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Copie&lt;/strong&gt; a chave gerada&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="configuração-2"&gt;Configuração&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-env" data-lang="env"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# .env&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;DEFAULT_PROVIDER&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;claude
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;CLAUDE_KEY&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;sk-ant-api03-1234567890abcdef...
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# Modelo padrão&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#953800"&gt;DEFAULT_MODEL&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;claude-3-5-haiku-latest &lt;span style="color:#57606a"&gt;# Mais rápido&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# DEFAULT_MODEL=claude-3-5-sonnet-latest # Melhor qualidade&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="modelos-disponíveis-2"&gt;Modelos Disponíveis&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;claude-3-5-sonnet-latest&lt;/code&gt;&lt;/strong&gt; - Melhor modelo geral&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;claude-3-5-haiku-latest&lt;/code&gt;&lt;/strong&gt; - Mais rápido e barato&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;claude-3-opus-latest&lt;/code&gt;&lt;/strong&gt; - Máxima qualidade (mais caro)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Preços aproximados:&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;Preços aproximados (por 1M tokens):&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

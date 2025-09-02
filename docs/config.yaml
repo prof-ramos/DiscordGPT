@@ -1,7 +1,7 @@
 baseURL: 'https://prof-ramos.github.io/DiscordGPT'
 languageCode: 'pt-br'
 title: 'Discord ChatGPT Bot - Documentação'
-theme: 'PaperMod'
+theme: 'docsy'
 
 # Hugo Configuration
 enableRobotsTXT: true
