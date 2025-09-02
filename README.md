@@ -168,3 +168,4 @@ Jailbreak personas require admin privileges for enhanced security:
 - Secure API key management via environment variables
 - Docker security hardening with non-root user
 - Read-only filesystem for container security
+# Atualização da feature
