@@ -66,6 +66,12 @@ jobs:
           fi
           echo "🔗 Base URL: $BASE_URL"
           
+          # Ensure BASE_URL ends with a slash
+          if [[ "$BASE_URL" != */ ]]; then
+            BASE_URL="${BASE_URL}/"
+          fi
+          echo "🔗 Formatted Base URL: $BASE_URL"
+          
           # Build with verbose output for debugging
           hugo \
             --gc \
