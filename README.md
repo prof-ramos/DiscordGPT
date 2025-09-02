@@ -122,11 +122,11 @@ Image generation is now integrated with the provider system:
 * Get the first message from ChatGPT in your discord channel!
 * Go Discord setting turn `developer mode` on
 
-   1. Right-click the channel you want to recieve the message, `Copy  ID`
+  1. Right-click the channel you want to recieve the message, `Copy  ID`
 
-        ![channel-id](https://user-images.githubusercontent.com/89479282/207697217-e03357b3-3b3d-44d0-b880-163217ed4a49.PNG)
+       ![channel-id](https://user-images.githubusercontent.com/89479282/207697217-e03357b3-3b3d-44d0-b880-163217ed4a49.PNG)
 
-   2. paste it into `.env` under `DISCORD_CHANNEL_ID`
+  2. paste it into `.env` under `DISCORD_CHANNEL_ID`
 
 ## Optional: Disable logging
 
@@ -176,6 +176,7 @@ python3 start_admin.py
 * `/private` - Bot replies only visible to command user
 * `/public` - Bot replies visible to everyone (default)
 * `/replyall` - Bot responds to all messages in channel (toggle)
+
 ## Security Features
 
 ### Admin-Only Jailbreak Access
