@@ -82,7 +82,7 @@ DEFAULT_MODEL=gpt-4o-mini  # Mais barato
 
 ### Modelos Disponíveis
 
-{{< tabs name="openai-models" >}}
+{{< tabpane name="openai-models" >}}
 
 {{% tab name="💬 Chat Models" %}}
 - **`gpt-4o`** - Modelo mais avançado (mais caro)
@@ -253,7 +253,7 @@ GEMINI_KEY=sua_chave_gemini
 
 ### Configuração por Qualidade
 
-{{< tabs name="quality-config" >}}
+{{< tabpane name="quality-config" >}}
 
 {{% tab name="🥇 Máxima Qualidade" %}}
 ```env
