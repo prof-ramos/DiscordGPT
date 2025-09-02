@@ -58,14 +58,12 @@ jobs:
           echo "📊 Hugo version: $(hugo version)"
           echo "📋 Theme: $(grep 'theme:' config.yaml || echo 'No theme specified')"
           
-          # Resolve base URL from Pages output with safe fallback and normalization
+          # Resolve base URL from Pages output with safe fallback
           BASE_URL="${{ steps.pages.outputs.base_url }}"
           if [ -z "$BASE_URL" ]; then
             # Fallback to repository Pages URL (project pages)
             BASE_URL="https://prof-ramos.github.io/DiscordGPT"
           fi
-          # Normalize to exactly one trailing slash
-          BASE_URL="${BASE_URL%/}/"
           echo "🔗 Base URL: $BASE_URL"
           
           # Build with verbose output for debugging
