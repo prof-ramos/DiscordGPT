@@ -73,12 +73,12 @@ jobs:
           echo "🔗 Formatted Base URL: $BASE_URL"
           
           # Build with verbose output for debugging
-          # Use a more robust approach to avoid shell interpretation issues
-          HUGO_CMD="hugo --gc --minify --verbose --baseURL"
-          echo "🔧 Executing command: $HUGO_CMD '$BASE_URL'"
+          # Construct the entire command as a single string to avoid shell interpretation issues
+          HUGO_CMD="hugo --gc --minify --verbose --baseURL \"$BASE_URL\""
+          echo "🔧 Executing command: $HUGO_CMD"
           
-          # Execute the command with proper quoting
-          $HUGO_CMD "$BASE_URL" 2>&1 | tee hugo-build.log
+          # Execute the command using eval to ensure proper parsing
+          eval $HUGO_CMD 2>&1 | tee hugo-build.log
           
           # Check build status and show errors if any
           if [ $? -eq 0 ]; then
